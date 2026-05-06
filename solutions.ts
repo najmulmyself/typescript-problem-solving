@@ -1,16 +1,6 @@
-/// Problem 1
-
 function filterEvenNumbers(arr: number[]): number[] {
-  let output: number[] = [];
-  arr.map((num) => {
-    if (num % 2 == 0) {
-      output.push(num);
-    }
-  });
-  return output;
+  return arr.filter((num) => num % 2 === 0);
 }
-
-/// Problem 2
 
 function reverseString(str: string): string {
   let output = "";
@@ -19,8 +9,6 @@ function reverseString(str: string): string {
   }
   return output;
 }
-
-/// Problem 3
 
 type StringOrNumber = string | number;
 
@@ -32,13 +20,9 @@ function checkType(inp: StringOrNumber): StringOrNumber {
   }
 }
 
-/// Problem 4
-
 function getProperty<T>(obj: T, key: keyof T): unknown {
   return obj[key];
 }
-
-/// Problem 5
 
 interface Book {
   title: string;
@@ -52,8 +36,6 @@ function toggleReadStatus<T extends Book>(obj: T) {
     isRead: true,
   };
 }
-
-/// Problem 6
 
 class Person {
   name: string;
@@ -77,8 +59,6 @@ class Student extends Person {
     return `"Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}"`;
   }
 }
-
-/// Problem 7
 
 function getIntersection(arr1: number[], arr2: number[]): number[] {
   return arr1.filter((value) => arr2.includes(value));

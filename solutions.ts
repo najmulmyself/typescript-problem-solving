@@ -1,5 +1,5 @@
-function filterEvenNumbers(arr: number[]): number[] {
-  return arr.filter((num) => num % 2 === 0);
+function filterEvenNumbers(numbersArray: number[]): number[] {
+  return numbersArray.filter((num) => num % 2 === 0);
 }
 
 function reverseString(str: string): string {
@@ -12,16 +12,16 @@ function reverseString(str: string): string {
 
 type StringOrNumber = string | number;
 
-function checkType(inp: StringOrNumber): StringOrNumber {
-  if (typeof inp === "string") {
+function checkType(input: StringOrNumber): StringOrNumber {
+  if (typeof input === "string") {
     return "String";
   } else {
     return "Number";
   }
 }
 
-function getProperty<T>(obj: T, key: keyof T): unknown {
-  return obj[key];
+function getProperty<T>(object: T, key: keyof T): unknown {
+  return object[key];
 }
 
 interface Book {
@@ -30,9 +30,9 @@ interface Book {
   publishedYear: number;
 }
 
-function toggleReadStatus<T extends Book>(obj: T) {
+function toggleReadStatus<T extends Book>(book: T) {
   return {
-    ...obj,
+    ...book,
     isRead: true,
   };
 }
@@ -60,6 +60,9 @@ class Student extends Person {
   }
 }
 
-function getIntersection(arr1: number[], arr2: number[]): number[] {
-  return arr1.filter((value) => arr2.includes(value));
+function getIntersection(
+  firstArray: number[],
+  secondArray: number[],
+): number[] {
+  return firstArray.filter((value) => secondArray.includes(value));
 }
